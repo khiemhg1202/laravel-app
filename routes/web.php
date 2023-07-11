@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PostsController;
 
 Route::get('/',
     [PagesController::class,
@@ -14,6 +15,15 @@ Route::get('/about',
     'about'
 ]);
 
+Route::get('/contact',
+    [PagesController::class,
+    'contact'
+]);
+
+Route::get('/post',
+    [PostsController::class,
+    'index'
+]);
 
 // Route::get('/products', [
 //     ProductsController::class,

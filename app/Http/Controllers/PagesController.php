@@ -22,4 +22,18 @@ class PagesController extends Controller
         
 
     }
+
+    public function contact () {
+        $name = 'Thuy Duong';
+        //return view('pages.contact')-> with('name',$name);
+
+        //$friends = ['Khiem, Tram, Quynh, Thai Ngan'];
+        $friends = [];
+        return view ('pages.contact', [
+            'friends' => $friends,
+        ]);
+
+
+        
+    }
 }
